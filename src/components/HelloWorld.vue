@@ -111,6 +111,7 @@ export default {
   },
   mounted() {
     // 如果没有定时器 || 定时器时间低于500ms(视电脑硬件配置及代码量)，会出现报错
+    // 因为还没init完成，写着这个里面
     setTimeout(() => {
       window.tinymce.activeEditor.setContent(this.Value)
     }, 1000);
